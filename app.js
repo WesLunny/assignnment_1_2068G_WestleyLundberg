@@ -3,6 +3,8 @@ import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
+
 
 
 //controller
@@ -14,6 +16,8 @@ const app = express();
 //body parser config
 app.use(bodyParser.json());
 
+//dot env config
+dotenv.config();
 //swagger config
 const docOptions = {
     definition: {
@@ -30,9 +34,12 @@ const openapiSpecification = swaggerJSDoc(docOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
 
 //mongoose setup db connection
+
+console.log(process.env.DB);
+
 mongoose.connect(process.env.DB,{})
 .then((res)=>console.log('connected to db'))
-.catch((err) => console.log("Connection failed: ${err}"));
+.catch((err) => console.log(`Connection failed: ${err}`));
 
 //url dispatching
 app.use('/api/v1/hotels', hotelsController);

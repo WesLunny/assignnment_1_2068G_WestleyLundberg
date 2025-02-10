@@ -67,7 +67,9 @@ router.get('/:id',async (req,res)=>{
  *                  type: string
  *                pricePerNight:
  *                  type: string
- * 
+ *                address:
+ *                  type: string
+ *                 
  *      responses:
  *        201:
  *          description: Resources created
@@ -107,9 +109,9 @@ router.post('/', async (req,res)=>{
  *                  type: integer
  *                name:
  *                  type: string
- *                price:
+ *                rating:
  *                  type: integer
- *                occurence:
+ *                address:
  *                  type: string
  *      responses:
  *        204:
