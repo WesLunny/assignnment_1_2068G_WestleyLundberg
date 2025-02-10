@@ -19,6 +19,10 @@ const hotelSchema = mongoose.Schema({
     address:{
         type:String,
         required:true
+    },
+
+    link:{
+        type:String,
     }
 });
 

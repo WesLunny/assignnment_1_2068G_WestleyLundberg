@@ -69,7 +69,8 @@ router.get('/:id',async (req,res)=>{
  *                  type: string
  *                address:
  *                  type: string
- *                 
+ *                link:
+ *                  type: string 
  *      responses:
  *        201:
  *          description: Resources created
@@ -112,6 +113,8 @@ router.post('/', async (req,res)=>{
  *                rating:
  *                  type: integer
  *                address:
+ *                  type: string
+ *                link:
  *                  type: string
  *      responses:
  *        204:
