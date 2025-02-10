@@ -1,6 +1,4 @@
 import express from 'express';
-//model reference
-import Cheese from '../models/hotel.js';
 import Hotel from '../models/hotel.js';
 
 const router = express.Router();
@@ -67,6 +65,9 @@ router.get('/:id',async (req,res)=>{
  *                  type: integer
  *                name:
  *                  type: string
+ *                pricePerNight:
+ *                  type: string
+ * 
  *      responses:
  *        201:
  *          description: Resources created
@@ -167,4 +168,3 @@ router.delete('/:id',async(req,res)=>{
 
 //make controller public to rest of app 
 export default router;
-

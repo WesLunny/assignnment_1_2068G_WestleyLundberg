@@ -35,7 +35,7 @@ mongoose.connect(process.env.DB,{})
 .catch((err) => console.log("Connection failed: ${err}"));
 
 //url dispatching
-app.use('/api/v1/hotels',hotelsController);
+app.use('/api/v1/hotels', hotelsController);
 
 //start up on port 3000
 app.listen(3000, ()=> {

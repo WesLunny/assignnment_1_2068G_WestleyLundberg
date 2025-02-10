@@ -7,6 +7,7 @@
     "swagger-ui-express": "^5.0.1"
   },
   "name": "assignment_1",
+  "type": "module",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
