@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Mongoose } from "mongoose";
 
 const hotelSchema = mongoose.Schema({
 
@@ -12,9 +12,13 @@ const hotelSchema = mongoose.Schema({
         required: true
     },
 
-
     rating:{
         type:Number
+    },
+
+    Address:{
+        type:String,
+        required:true
     }
 });
 

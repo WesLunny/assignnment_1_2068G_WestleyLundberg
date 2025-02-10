@@ -3,7 +3,8 @@
     "body-parser": "^1.20.3",
     "express": "^4.21.2",
     "mongoose": "^8.9.6",
-    "swagger": "^0.7.5"
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "name": "assignment_1",
   "version": "1.0.0",
